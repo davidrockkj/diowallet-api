@@ -5,4 +5,7 @@ import express from "express"
  */
 const app = express();
 
+/** Ligar o servidor e escutar a porta 5000
+ *  mostrar mensagem ao usuário
+ */
 app.listen(5000, () => console.log("Server listening in port 5000"));
