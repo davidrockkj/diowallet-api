@@ -9,3 +9,4 @@ npm i -D nodemon
 ### 3 - Criando 'server.js' o servidor principal da aplicação
 src > server.js
 
+Para importar o Express from 'export' é preciso que o projeto seja modular. Para isso, ir em 'package.json' e adicione o 'type: module'
