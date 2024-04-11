@@ -10,3 +10,5 @@ npm i -D nodemon
 src > server.js
 
 Para importar o Express from 'export' é preciso que o projeto seja modular. Para isso, ir em 'package.json' e adicione o 'type: module'
+
+Armazenando a execução do Express com 'const app = express();'
