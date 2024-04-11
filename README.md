@@ -20,3 +20,6 @@ Ligue o meu servidor e fique ouvindo na porta 5000 e coloque uma mensagem pra o 
 
 ### 7 - Abrindo a porta '.get'
 Imaginando que no passo anterior eu passei o endereço e a porta até a minha casa, nesse passo irei abrir uma porta 'banheiro' ao usuário e dizer o que ele pode fazer lá. Ele pode receber uma requisição 'req' e retornar uma resposta 'res'
+
+## Atualizar o server automaticamente
+Neste ponto, se o servidor já estiver ligado, não será possível encontrar a rota '/banheiro' pois ele não atualizou. Para contornar esta situação e fazer o server acompanhar as mudanças, devemos rodar o server com o nodemon **npx nodemon src/server.js**
