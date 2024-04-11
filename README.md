@@ -23,3 +23,6 @@ Imaginando que no passo anterior eu passei o endereço e a porta até a minha ca
 
 ## Atualizar o server automaticamente
 Neste ponto, se o servidor já estiver ligado, não será possível encontrar a rota '/banheiro' pois ele não atualizou. Para contornar esta situação e fazer o server acompanhar as mudanças, devemos rodar o server com o nodemon **npx nodemon src/server.js**
+
+## Requisições
+Usando a extensão **Thunder Client** no VSCode para fazer as requisições
