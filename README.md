@@ -6,6 +6,8 @@ npm i express
 ### 2 - Instalando o 'nodemon' em ambiente de desenvolviment
 npm i -D nodemon
 
+## server.js
+
 ### 3 - Criando 'server.js' o servidor principal da aplicação
 src > server.js
 
@@ -26,3 +28,16 @@ Neste ponto, se o servidor já estiver ligado, não será possível encontrar a 
 
 ## Requisições
 Usando a extensão **Thunder Client** no VSCode para fazer as requisições
+
+## Arquitetura
+Arquitetura em camadas: escolhida porque é de fácil manutenção, com arquivos isolados. Dessa maneira, cada camada terá a sua responsabilidade.
+
+Em **src**,
+
+- **config:** onde vai ser configurado o banco de dados;
+- **controllers:** os controladores de requisição e resposta (funções) - pegam e tratam a requisição para então devolver uma resposta. Porém, só haverá uma resposta se o banco devolver algo;
+- **service:** valida a requisição a partir da regra de negócio;
+- **repositories:** arquivos que acessam o banco de dados;
+- **routes:** arquivos que possuem o nome da rota,que mapeiam quais são os acessos que vão existir na API.
+
+As **rota** vai chamar o **controller** que vai administrar a entrada e saída. O **service** vai validar a regra de negócio dos dados, o **repositories** vai acessar o **banco de dados**, que por sua vez, vai inserir essas informações. E então a resposta percorre o caminho contrário.
