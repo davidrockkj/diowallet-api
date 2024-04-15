@@ -41,3 +41,20 @@ Em **src**,
 - **routes:** arquivos que possuem o nome da rota,que mapeiam quais são os acessos que vão existir na API.
 
 As **rota** vai chamar o **controller** que vai administrar a entrada e saída. O **service** vai validar a regra de negócio dos dados, o **repositories** vai acessar o **banco de dados**, que por sua vez, vai inserir essas informações. E então a resposta percorre o caminho contrário.
+
+
+## /Routes
+Aqui serão construídas as rotas do sistema.
+
+### 8 - authRoutes.js
+Importando o pacote de 'Router' do 'Express';
+
+### 9 - const authRouter - (authRouter.js)
+Recebendo a execução do pacote 'Router()'
+
+### 10 - Criar um novo usuário - (authRouter.js)
+Toda criação utiliza o método **Post**.
+Essa rota '/signup' chama um controller 'authController' que terá a função 'signup'
+
+### 11 - Exportando o Router - (authRouter.js)
+Exportando, de maneira padrão, para conseguir importar no servidor
