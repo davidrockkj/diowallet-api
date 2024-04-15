@@ -21,7 +21,11 @@ Armazenando a execução do Express. Tudo que tiver no Express será armazenado 
 Ligue o meu servidor e fique ouvindo na porta 5000 e coloque uma mensagem pra o usuário
 
 ### 7 - Abrindo a porta '.get'
-Imaginando que no passo anterior eu passei o endereço e a porta até a minha casa, nesse passo irei abrir uma porta 'banheiro' ao usuário e dizer o que ele pode fazer lá. Ele pode receber uma requisição 'req' e retornar uma resposta 'res'
+Imaginando que no passo anterior eu passei o endereço e a porta até a minha casa, nesse passo irei abrir uma porta 'banheiro' ao usuário e dizer o que ele pode fazer lá. Ele pode receber uma requisição 'req' e retornar uma resposta 'res' ( o código foi removido, pois seu lugar é em '/routes')
+// 7 - Abrindo a porta '.get'
+// app.get("/banheiro", (req, res) => {
+//   res.send("Faça suas necessidades")
+// })
 
 ## Atualizar o server automaticamente
 Neste ponto, se o servidor já estiver ligado, não será possível encontrar a rota '/banheiro' pois ele não atualizou. Para contornar esta situação e fazer o server acompanhar as mudanças, devemos rodar o server com o nodemon **npx nodemon src/server.js**
@@ -58,3 +62,9 @@ Essa rota '/signup' chama um controller 'authController' que terá a função 's
 
 ### 11 - Exportando o Router - (authRouter.js)
 Exportando, de maneira padrão, para conseguir importar no servidor
+
+### 12 - Importando o Router - (server.js)
+import authRouter from "./routes/authRoutes.js";
+
+### 13 - Implementando authRouter - (server.js)
+app, use essa rota (que no caso seria a rota do passo 12)
