@@ -88,3 +88,9 @@ Tudo que vem do formulário será armazenado na const 'body'
 
 ### 17 - Validando as informações
 Para validar, será preciso ir a um serviço 'authService' que irá chamar sua função 'signup', diferente da 'signup' do Controller.
+
+
+
+## Services
+
+## 19 - Criando a função 'signup' do Service
