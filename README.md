@@ -68,3 +68,15 @@ import authRouter from "./routes/authRoutes.js";
 
 ### 13 - Implementando authRouter - (server.js)
 app, use essa rota (que no caso seria a rota do passo 12)
+
+
+
+## Controllers
+
+### 14 - authController.js
+Ele vai ter o gerenciamento de requisições e respostas, através de uma função
+
+### 15 - Criando a função signup
+Ela pode receber uma requisição **req** e uma resposta **res**.
+
+Exportando como objeto 'export default { signup }'
