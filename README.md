@@ -78,5 +78,13 @@ Ele vai ter o gerenciamento de requisições e respostas, através de uma funç�
 
 ### 15 - Criando a função signup
 Ela pode receber uma requisição **req** e uma resposta **res**.
-
 Exportando como objeto 'export default { signup }'
+
+### 16 - Armazenando as informações do fomulário
+```js
+const body = req.body; 
+```
+Tudo que vem do formulário será armazenado na const 'body'
+
+### 17 - Validando as informações
+Para validar, será preciso ir a um serviço 'authService' que irá chamar sua função 'signup', diferente da 'signup' do Controller.
