@@ -6,8 +6,11 @@ function signup(req, res) {
   // 16 - Armazenando as informações do fomulário
   const body = req.body;
 
-  // 17 - Validando as informações
-  authService.signup(body);
+  // 17 - Validando as informações e armazenando as informações
+  const resService = authService.signup(body);
+
+  // 21 - Enviando a resposta da função
+  res.send(resService);
 }
 
 export default { signup }
