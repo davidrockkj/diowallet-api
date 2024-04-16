@@ -1,4 +1,6 @@
 import { Router } from "express";
+// 18 - Importando o Controller
+import authController from "../controllers/authController";
 
 // 9 - Recebendo a execução do Router
 const authRouter = Router()
