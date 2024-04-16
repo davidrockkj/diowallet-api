@@ -100,3 +100,15 @@ Armazenando a informação na constante 'resService'.
 ### 20 - importando o authService no authController
 
 ### 21 - Enviando a resposta da função
+
+### 23 - Falando para o App usar JSON
+Aqui é uma etapa muito importante. Pois, dizer ao Express que ele precisa estar pronto para receber arquivos em JSON e antes da rota 'app.use(authRouter)', que precisa que o JSON esteja habilitado
+
+O que acontece é o seguinte:
+1 - a partir do Thunder Client
+ - Bato na rota '/signup'
+ - '/signup' chama 'authController'
+ - Controller pegou o 'body' na requisição e enviou para o 'authService'
+ - O Service retornou o 'body' pro Controller na variável 'resService'
+ - O Controller retornou a variável para a rota
+ - Devolveu para o client (com o thunder client)
