@@ -7,7 +7,7 @@ function signup(req, res) {
   const body = req.body;
 
   // 17 - Validando as informações
-  authServicece.signup(body);
+  authService.signup(body);
 }
 
 export default { signup }
