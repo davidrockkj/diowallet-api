@@ -94,4 +94,6 @@ Para validar, será preciso ir a um serviço 'authService' que irá chamar sua f
 
 ## Services
 
-## 19 - Criando a função 'signup' do Service
+### 19 - Criando a função 'signup' do Service
+
+### 20 - importando o authService no authController
