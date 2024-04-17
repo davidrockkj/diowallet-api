@@ -123,7 +123,7 @@ O que acontece é o seguinte:
   ![Criando New Collection](/src/screenshot/newCollection.png) aqui eu criei uma chamada *DioWallet* para esse projeto <br/>
 3 - Crio uma nova request **POST** para **localhost:5000/banheiro** que é a porta que estamos usando nesse projeto <br/>
   ![Rota SIGNUP](/src/screenshot/rotaSignup.png) obs.: Não se usa form, se usa **JSON**<br/>
-4 - Bato na rota '/signup' <br/>
+4 - Bato na rota '/signup', que tem um arquivo de **POST** <br/>
 5 - '/signup' chama 'authController' <br/>
 6 - Controller pegou o 'body' na requisição e enviou para o 'authService' <br/>
 7 - O Service retornou o 'body' pro Controller na variável 'resService' <br/>
