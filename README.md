@@ -1,15 +1,21 @@
 # diowallet-api
 
 ### 1 - Instalando o 'Express'
+```powershell
 npm i express
+```
 
 ### 2 - Instalando o 'nodemon' em ambiente de desenvolviment
+```powershell
 npm i -D nodemon
+```
 
 ## server.js
 
 ### 3 - Criando 'server.js' o servidor principal da aplicação
+```powershell
 src > server.js
+```
 
 ### 4 - Importando o Express
 Para importar o Express from 'express' é preciso que o projeto seja modular. Para isso, ir em 'package.json' e adicione o 'type: module'
@@ -23,12 +29,17 @@ Ligue o meu servidor e fique ouvindo na porta 5000 e coloque uma mensagem pra o 
 ### 7 - Abrindo a porta '.get'
 Imaginando que no passo anterior eu passei o endereço e a porta até a minha casa, nesse passo irei abrir uma porta 'banheiro' ao usuário e dizer o que ele pode fazer lá. Ele pode receber uma requisição 'req' e retornar uma resposta 'res' ( o código foi removido, pois seu lugar é em '/routes')
 // 7 - Abrindo a porta '.get'
-// app.get("/banheiro", (req, res) => {
-//   res.send("Faça suas necessidades")
-// })
+```js
+app.get("/banheiro", (req, res) => {
+  res.send("Faça suas necessidades")
+})
+```
 
 ## Atualizar o server automaticamente
-Neste ponto, se o servidor já estiver ligado, não será possível encontrar a rota '/banheiro' pois ele não atualizou. Para contornar esta situação e fazer o server acompanhar as mudanças, devemos rodar o server com o nodemon **npx nodemon src/server.js**
+Neste ponto, se o servidor já estiver ligado, não será possível encontrar a rota '/banheiro' pois ele não atualizou. Para contornar esta situação e fazer o server acompanhar as mudanças, devemos rodar o server com o nodemon 
+```powershell
+npx nodemon src/server.js
+```
 
 ## Requisições
 Usando a extensão **Thunder Client** no VSCode para fazer as requisições
@@ -102,17 +113,19 @@ Armazenando a informação na constante 'resService'.
 ### 21 - Enviando a resposta da função
 
 ### 23 - Falando para o App usar JSON
-Aqui é uma etapa muito importante. Pois, dizer ao Express que ele precisa estar pronto para receber arquivos em JSON e antes da rota 'app.use(authRouter)', que precisa que o JSON esteja habilitado
+Aqui é uma etapa muito importante. Pois, dizer ao Express que ele precisa estar pronto para receber arquivos em JSON e antes da rota 'app.use(authRouter)', que precisa que o JSON esteja habilitado. <br/>
+A ordem em que ele é chamado importa, então ele deve vir entre a construção do *app* (express) e a *rota*. <br/>
 
 O que acontece é o seguinte:
 0 - Rodar o server 'npx nodemon src/server.js' <br/>
 1 - Abrir o **Thunder Client** <br/>
 2 - Criar uma **New Collection** a partir do menu, ao lado do input *filter collections* <br/>
-![Criando New Collection](/src/screenshot/newCollection.png) aqui eu criei uma chamada *DioWallet* para esse projeto <br/>
-3 - Crio uma nova request **GET** para **localhost:5000/banheiro** que é a porta que estamos usando nesse projeto <br/>
- - Bato na rota '/signup' <br/>
- - '/signup' chama 'authController' <br/>
- - Controller pegou o 'body' na requisição e enviou para o 'authService' <br/>
- - O Service retornou o 'body' pro Controller na variável 'resService' <br/>
- - O Controller retornou a variável para a rota <br/>
- - Devolveu para o client (com o thunder client) <br/>
+  ![Criando New Collection](/src/screenshot/newCollection.png) aqui eu criei uma chamada *DioWallet* para esse projeto <br/>
+3 - Crio uma nova request **POST** para **localhost:5000/banheiro** que é a porta que estamos usando nesse projeto <br/>
+  ![Rota SIGNUP](/src/screenshot/rotaSignup.png) obs.: Não se usa form, se usa **JSON**<br/>
+4 - Bato na rota '/signup' <br/>
+5 - '/signup' chama 'authController' <br/>
+6 - Controller pegou o 'body' na requisição e enviou para o 'authService' <br/>
+7 - O Service retornou o 'body' pro Controller na variável 'resService' <br/>
+8 - O Controller retornou a variável para a rota <br/>
+9 - Devolveu para o client (com o thunder client) <br/>
