@@ -155,3 +155,17 @@ Para criar o Banco de dados, estaremos utilizando o MongoDB Atlas, que é um ser
   npm install mongoose
   ```
 
+
+## Config
+### database.js
+Criando a configuração do banco de dados.
+
+### 24 - Importando o mongoose - (database.js)
+
+### 25 - Adicionando a URL de conexão com o MongoDB - (database.js)
+```js
+const mongoUrl = "mongodb+srv://admin:<password>@diowallet-cluster.nmprwtj.mongodb.net/?retryWrites=true&w=majority&appName=diowallet-cluster";
+```
+Note que nessa string existe uma parte **<password>** que é o local da senha que definimos na criação do banco de dados. Nesse caso, podemos substitui pela senha configurada
+
+### 26 - Conectando com o MongoDB - (database.js)
