@@ -105,7 +105,12 @@ Armazenando a informação na constante 'resService'.
 Aqui é uma etapa muito importante. Pois, dizer ao Express que ele precisa estar pronto para receber arquivos em JSON e antes da rota 'app.use(authRouter)', que precisa que o JSON esteja habilitado
 
 O que acontece é o seguinte:
-1 - a partir do Thunder Client
+0 - Rodar o server 'npx nodemon src/server.js'
+1 - Abrir o **Thunder Client**
+3 - Criar uma **New Collection** a partir do menu, ao lado do input *filter collections*
+  ![Criando New Collection](/src/screenshot/newCollection.png)
+4 - 
+2 - Crio uma nova request **GET** para **localhost:5000/banheiro** que é a porta que estamos usando nesse projeto
  - Bato na rota '/signup'
  - '/signup' chama 'authController'
  - Controller pegou o 'body' na requisição e enviou para o 'authService'
