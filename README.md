@@ -129,3 +129,29 @@ O que acontece é o seguinte:
 7 - O Service retornou o 'body' pro Controller na variável 'resService' <br/>
 8 - O Controller retornou a variável para a rota <br/>
 9 - Devolveu para o client (com o thunder client) <br/>
+
+
+# Banco de Dados
+## MongoDB Atlas
+Para criar o Banco de dados, estaremos utilizando o MongoDB Atlas, que é um serviço gratuito em nuvem.
+
+1- Entrar no site do ![MongoDB Atlas](https://www.mongodb.com/) <br/>
+
+2- Criar um novo projeto. No meu caso será chamado **diowallet**
+  ![NovoProjeto](/src/screenshot/novoProjetoMDB.png) <br/>
+
+3- Avance as próximas etapas até que chegue a parte do **Create a Deployment** <br/>
+
+4- Escolha uma máquina gratuita (por motivos óbvios) e as próximas configurações foram as seguintes (São Paulo para ter um tempo de resposta menor):
+  ![configMDB1](/src/screenshot/configMDB1.png) <br/>
+
+5- Configurações de segurança
+  ![configMDB2](/src/screenshot/configMDB2.png) clique em **Create Database User** <br/>
+
+5- Método de conexão
+  ![configMDB2](/src/screenshot/configMDB2.png) será **Drivers**, através da ODM **Mongoose** que gerencia as conexões de banco de dados para MongoDB <br/>
+  ![configMDB3](/src/screenshot/configMDB3.png) ao selecionar o Driver como **Mongoose**, ele trará o comando para instalação do mesmo na aplicação
+  ```powershell
+  npm install mongoose
+  ```
+
