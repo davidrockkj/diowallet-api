@@ -1,5 +1,5 @@
 // 4 - Importando o Express
-import express from "express"
+import express, { json } from "express"
 // 12 - Importando o Router
 import authRouter from "./routes/authRoutes.js";
 
@@ -10,6 +10,9 @@ const app = express();
 
 // 7 - Abrindo a porta '.get'
 // -------------------------- removido
+
+// 23 - Falando para o App usar JSON
+app.use(json())
 
 // 13 - Implementando authRouter
 app.use(authRouter)
