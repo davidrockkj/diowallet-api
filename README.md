@@ -169,3 +169,12 @@ const mongoUrl = "mongodb+srv://admin:<password>@diowallet-cluster.nmprwtj.mongo
 Note que nessa string existe uma parte **<password>** que é o local da senha que definimos na criação do banco de dados. Nesse caso, podemos substitui pela senha configurada
 
 ### 26 - Conectando com o MongoDB - (database.js)
+Essa função **connect** devolve uma promessa (promisse) que pode demorar. Porém, o javascript e não espera nada, sai executando linha após linha. Por isso é necessário colocar o **await** antes da chamada. <br/>
+PORÉM, o await **PRECISA** vir abaixo de uma função assíncrona, com isso adicionaremos **async** na função **connectDb()**
+```js
+export async function connectDb();
+```
+
+Ainda, não sabemos o que acontece no *MongoDB Atlas* (ou banco de dados qualquer), então é necessário fazer um **try** e um **catch**. <br/>
+
+A leitura fica tipo: *tente conectar no mongoose. Se não der certo, jogue um erro ao **catch***
