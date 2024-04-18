@@ -180,3 +180,5 @@ Ainda, não sabemos o que acontece no *MongoDB Atlas* (ou banco de dados qualque
 A leitura fica tipo: *tente conectar no mongoose. Se não der certo, jogue um erro ao **catch***
 
 ### 27 - Desconectando o banco de dados - (database.js)
+
+### 28 - Importando e Rodando a função de conexão com o Banco de Dados  - (server.js)
