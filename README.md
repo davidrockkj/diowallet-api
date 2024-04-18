@@ -178,3 +178,5 @@ export async function connectDb();
 Ainda, não sabemos o que acontece no *MongoDB Atlas* (ou banco de dados qualquer), então é necessário fazer um **try** e um **catch**. <br/>
 
 A leitura fica tipo: *tente conectar no mongoose. Se não der certo, jogue um erro ao **catch***
+
+### 27 - Desconectando o banco de dados - (database.js)
