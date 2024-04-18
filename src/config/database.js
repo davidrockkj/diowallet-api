@@ -8,7 +8,13 @@ export async function connectDb() {
   try {
     // 26 - Conectando com o MongoDB
     await mongoose.connect(mongoUrl)
+    console.log("Mongo Atlas connected!");
   } catch (err) {
     console.log(err.message);
   }
+}
+
+export async function disconnectDb() {
+  // 27 - Desconectando do MongoDB
+  await mongoose.disconnect();
 }
