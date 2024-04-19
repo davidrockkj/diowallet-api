@@ -4,6 +4,9 @@ import express, { json } from "express"
 import authRouter from "./routes/authRoutes.js";
 // 28 - Importando o 'connectDb'
 import { connectDb } from "./config/database.js";
+// 34 - Importando o 'dotenv'
+import "dotenv/config";
+
 
 
 
@@ -20,4 +23,6 @@ app.use(json())
 app.use(authRouter)
 
 // 6 - Criando a primeira rota
-app.listen(5000, () => console.log("Server listening in port 5000"));
+// 34 - Port como variável de ambiente
+const port = process.env.PORT
+app.listen(process.env.port, () => console.log(`Server listening in port ${port}`));

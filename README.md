@@ -216,3 +216,8 @@ No processo do Node tem um arquivo '.env'. Dentro do arquivo tem uma variável '
 ```js
 process.env.DATABASE_URI
 ```
+
+### 34 - Passando a porta como variável de ambiente - (server.js) (.env)
+E importando o '.env'; <br/>
+Concatenando o console.log com template string para mostrar a porta
+
