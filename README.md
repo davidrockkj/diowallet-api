@@ -221,3 +221,6 @@ process.env.DATABASE_URI
 E importando o '.env'; <br/>
 Concatenando o console.log com template string para mostrar a porta
 
+
+## Schemas com Mongoose
+Definir como o usuário deve ser criado. No mongoDB, cada documento é um usuário dentro da collection.
