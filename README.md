@@ -211,3 +211,8 @@ npm i dotenv
 import "dotenv/config";
 ```
 
+### 33 - Ajustando o implemento '.env' - (database.js)
+No processo do Node tem um arquivo '.env'. Dentro do arquivo tem uma variável 'DATABASE_URI'.
+```js
+process.env.DATABASE_URI
+```

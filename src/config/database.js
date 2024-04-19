@@ -9,7 +9,8 @@ export async function connectDb() {
 
   try {
     // 26 - Conectando com o MongoDB
-    await mongoose.connect(DATABASE_URI)
+    // 33 - Ajustando implementação do '.env'
+    await mongoose.connect(process.env.DATABASE_URI)
     console.log("Mongo Atlas connected!");
   } catch (err) {
     console.log(err.message);
