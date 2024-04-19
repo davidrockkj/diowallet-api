@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 
 export async function connectDb() {
   // 25 - Adicionando a connection string
-  const mongoUrl = "mongodb+srv://admin:admin@diowallet-cluster.nmprwtj.mongodb.net/?retryWrites=true&w=majority&appName=diowallet-cluster";
+  // [MOVIDO PARA '.env' no passo 30]
 
   try {
     // 26 - Conectando com o MongoDB
-    await mongoose.connect(mongoUrl)
+    await mongoose.connect(DATABASE_URI)
     console.log("Mongo Atlas connected!");
   } catch (err) {
     console.log(err.message);

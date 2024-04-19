@@ -195,3 +195,7 @@ Por exemplo: A *conection string* que estamos usando possui dados extremamente d
 Para isso, existe o conceito de **Variáveis de Ambiente**, que são variáveis que configuramos em cada ambiente que estivermos.
 
 
+### 29 - Criando o '.env' na raiz do projeto
+
+### 30 - Movendo a connection string de 'database.js' para '.env'
+Além de mover, implementando em 'database.js'
