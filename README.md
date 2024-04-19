@@ -184,3 +184,14 @@ A leitura fica tipo: *tente conectar no mongoose. Se não der certo, jogue um er
 ### 27 - Desconectando o banco de dados - (database.js)
 
 ### 28 - Importando e Rodando a função de conexão com o Banco de Dados  - (server.js)
+
+
+## Configurando Variáveis de Ambiente
+Por exemplo: A *conection string* que estamos usando possui dados extremamente delicados e não é legal deixar exposto mesmo que no back-end.
+```js
+"mongodb+srv://admin:admin@diowallet-cluster.nmprwtj.mongodb.net/?retryWrites=true&w=majority&appName=diowallet-cluster"
+```
+
+Para isso, existe o conceito de **Variáveis de Ambiente**, que são variáveis que configuramos em cada ambiente que estivermos.
+
+
