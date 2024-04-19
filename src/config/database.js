@@ -1,5 +1,7 @@
 // 24 - Importando o Mongoose
 import mongoose from "mongoose";
+// 32 - Importando o 'dotenv'
+import "dotenv/config";
 
 export async function connectDb() {
   // 25 - Adicionando a connection string

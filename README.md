@@ -198,4 +198,16 @@ Para isso, existe o conceito de **Variáveis de Ambiente**, que são variáveis 
 ### 29 - Criando o '.env' na raiz do projeto
 
 ### 30 - Movendo a connection string de 'database.js' para '.env'
-Além de mover, implementando em 'database.js'
+Além de mover, implementando em 'database.js'. <br/>
+Até o momento atual ele não irá funcionar. É necessário fazer o uso de uma biblioteca para conseguir acessar o arquivo '.env' em qualquer máquina. Lembrando que o '.env' não é versionado.
+
+### 31 - Instalando o 'dotenv'
+```powershell
+npm i dotenv
+```
+
+### 32 - Importando o 'dotenv' em 'database.js'
+```js
+import "dotenv/config";
+```
+
