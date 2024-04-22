@@ -224,3 +224,40 @@ Concatenando o console.log com template string para mostrar a porta
 
 ## Schemas com Mongoose
 Definir como o usuário deve ser criado. No mongoDB, cada documento é um usuário dentro da collection.
+
+Nessa pasta teremos um modelo para vários documentos que serão construídos.
+
+Ele irá servir para que possamos criar, ler, atualizar, deletar **(CRUD)** cada documento da *Collection (tabelas)*. E a *collection* é acessada pelo **UserSchema**.
+
+### 35 - schemas/User.js
+
+### 36 - Criando uma constante
+com o mongoose (irá aparecer a opção de importar com o mongoose)
+
+### 37 - Configura o Schema a partir de um objeto
+```js
+const UserSchema = new Schema({
+  // 37 - Configurando o Schema a partir de um objeto
+  name: { type: String, required: true },
+  email: { type: String, unique:true, required: true },
+  password: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now() }
+});
+```
+
+Dentro de **name**, por exemplo, definimos o tipo como *String* e como campo obrigatório através do *required*.<br/>
+A diferença em **email** é a propriedade *unique*, para não ter o mesmo e-mail para outro usuário.<br/>
+**createdAt**: o momento em que a conta foi criada. O *default: Date.now()* indica o momento "atual" em que ela foi criada, tirando a necessidade de se ter um *required*. <br/>
+O Schema terá um ID. Porém, o ID de cada documento é gerado automaticamente pelo *mongoose*
+
+### 38 - Exportando o Schema
+Fala-se que o Schema é um *modelo* que no **Banco de Dados** vai ser chamado de **users**, referente ao *UserSchema*.
+```js
+export default model("users", UserSchema);
+```
+
+Ou seja, toda vez que for dado um comando:
+```js
+UserSchema.create
+```
+ele irá criar um novo usuário a partir do que foi configurado anteriormente
