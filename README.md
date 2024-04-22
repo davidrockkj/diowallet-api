@@ -270,6 +270,12 @@ ele irá criar um novo usuário a partir do que foi configurado anteriormente
 
 
 ## Criptografia de Senha com **bcrypt**
+Para salvar a senha de forma **segura** é preciso fazer um *hash (criptografar)* da senha do usuário. Isso porque **NIGUÉM** pode ver a sua senha.
+
+E para criptografar, é utilizada uma biblioteca chamada **BCRYPT**
+
 
 ### 39 - removendo o retorno do body
 Ele não pode **só** retornar o *body*, ele precisa pegar o body e conseguir trabalhar com as informações de acordo com as regras de negócio.
+
+### 40 - 
