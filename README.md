@@ -112,6 +112,11 @@ Armazenando a informação na constante 'resService'.
 
 ### 21 - Enviando a resposta da função
 
+### 22 - Retornando o body
+```js
+return body
+```
+
 ### 23 - Falando para o App usar JSON
 Aqui é uma etapa muito importante. Pois, dizer ao Express que ele precisa estar pronto para receber arquivos em JSON e antes da rota 'app.use(authRouter)', que precisa que o JSON esteja habilitado. <br/>
 A ordem em que ele é chamado importa, então ele deve vir entre a construção do *app* (express) e a *rota*. <br/>
