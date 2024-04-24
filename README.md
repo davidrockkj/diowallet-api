@@ -291,3 +291,7 @@ npm i bcrypt
 *10* - saltos de hash que ele tem que dar: quantas voltas de criptografia ele vai dar para gerar o hash. Pode ser infinito. Acima de 10, começa a ficar lento para ser gerado deixando a API lenta. <br/>
 
 *Caso queira ver o hash criado, coloque um **return hasPassword** após a criação da constante **hasPassword** e faça uma requisição no Thunder Client.*
+
+### 43 - criando um usuário no authRepository
+
+### 44 - repositories > authRepository.js

@@ -8,6 +8,9 @@ function signup(body) {
 
   // 42 - criando uma hashPassword
   const hasPassword = bcrypt.hashSync(body.password, 10)
+  
+  // 43 - criando um usuário no authRepository
+  authRepository.create()
 }
 
 export default { signup };
