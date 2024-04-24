@@ -282,3 +282,12 @@ Ele não pode **só** retornar o *body*, ele precisa pegar o body e conseguir tr
 ```powershell
 npm i bcrypt
 ```
+
+### 41 - importando 'bcrypt'
+
+### 42 - Criando um 'hasPassword'
+*hashSync* - usado para gerar de forma síncrona um hash para uma determinada String. Retorna uma string com hash. Elimina a necessidade de colocar 'await'. <br/>
+*body.password* - dado a ser criptografado <br/>
+*10* - saltos de hash que ele tem que dar: quantas voltas de criptografia ele vai dar para gerar o hash. Pode ser infinito. Acima de 10, começa a ficar lento para ser gerado deixando a API lenta. <br/>
+
+*Caso queira ver o hash criado, coloque um **return hasPassword** após a criação da constante **hasPassword** e faça uma requisição no Thunder Client.*
