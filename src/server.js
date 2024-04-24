@@ -25,4 +25,4 @@ app.use(authRouter)
 // 6 - Criando a primeira rota
 // 34 - Port como variável de ambiente
 const port = process.env.PORT
-app.listen(process.env.port, () => console.log(`Server listening in port ${port}`));
+app.listen(port, () => console.log(`Server listening in port ${port}`));

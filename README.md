@@ -278,4 +278,7 @@ E para criptografar, é utilizada uma biblioteca chamada **BCRYPT**
 ### 39 - removendo o retorno do body
 Ele não pode **só** retornar o *body*, ele precisa pegar o body e conseguir trabalhar com as informações de acordo com as regras de negócio.
 
-### 40 - 
+### 40 - Instalando **bcrypt**
+```powershell
+npm i bcrypt
+```
