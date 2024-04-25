@@ -292,6 +292,15 @@ npm i bcrypt
 
 *Caso queira ver o hash criado, coloque um **return hasPassword** após a criação da constante **hasPassword** e faça uma requisição no Thunder Client.*
 
-### 43 - criando um usuário no authRepository
+### 43 - repositories > authRepository.js
 
-### 44 - repositories > authRepository.js
+### 44 - Criando a função 'create()'
+Que irá receber os dados *data* e retorná-los
+
+### 45 - Importando o authRepository
+
+### 46 - criando um usuário no authRepository
+Enviando, como objeto, *...body* - tudo que tem no body, e alterar o password: *password: hasPassword*
+
+### 47 - Retorno da função 'signup'
+O retorno dela será igual ao que vier do *repository* (authRepository).
