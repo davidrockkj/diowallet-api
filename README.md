@@ -304,3 +304,10 @@ Enviando, como objeto, *...body* - tudo que tem no body, e alterar o password: *
 
 ### 47 - Retorno da função 'signup'
 O retorno dela será igual ao que vier do *repository* (authRepository).
+
+
+## Criação de um Usuário no MongoDB
+
+### 48 - Verificando se o email já existe - (authServices.js)
+
+### 49 - Criando a função - (authRepository.js)

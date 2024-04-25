@@ -10,6 +10,9 @@ function signup(body) {
 
   // 42 - criando uma hashPassword
   const hasPassword = bcrypt.hashSync(body.password, 10)
+
+  // 48 - Verificando se o email já existe
+  const userExists = 
   
   // 46 - criando um usuário no authRepository
   authRepository.create({ ...body, password: hasPassword })
